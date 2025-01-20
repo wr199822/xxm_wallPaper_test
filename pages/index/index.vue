@@ -1,52 +1,28 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view class="homeLayout">
+		<view class="banner">
+			<swiper >
+				<swiper-item v-for="item in 3">
+					<image src="/common/images/wallpaper/banner1.jpg" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
 		</view>
+
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
+<script setup>
 
-		},
-		methods: {
-
-		}
-	}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+	.homeLayout{
+		.banner{
+			width: 750rpx;
+			margin: 30rpx 0;
+			
+			
+		}
 	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+	
 </style>
