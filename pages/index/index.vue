@@ -23,6 +23,36 @@
 				<uni-icons type="right" size="25" color="#e4e4e4"></uni-icons>
 			</view>
 		</view>
+		<view class="select">
+			<common-title>
+				<template  #name>今日推荐</template>
+				<template #custom>
+					<view class="date">
+						<uni-icons type="calendar-filled" size="24" color="#28b389"></uni-icons>
+						<view class="text">
+							<uni-dateformat :date="Date.now()" format="dd日"></uni-dateformat>
+						</view>
+					</view>
+				</template>
+			</common-title>
+			<view class="content">
+				<scroll-view scroll-x="true">
+					<view class="box" v-for="item in 8">
+						<image src="../../common/images/wallpaper/preview1.jpg" mode="aspectFill"></image>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+		<view class="theme">
+			<common-title>
+				<template #name>专题精选</template>
+				<template #custom>
+					<view class="more">
+						More+
+					</view>
+				</template>
+			</common-title>
+		</view>
 
 	</view>
 </template>
@@ -37,16 +67,13 @@
 		.banner{
 			width: 750rpx;
 			padding: 30rpx 0;
-			border-radius: 20rpx;
 			swiper{
 				width: 750rpx;
 				height: 340rpx;
 				padding: 0 30rpx;
-			    border-radius: 20rpx;
 				&-item{
 					width: 100%;
 					height: 100%;
-					border-radius: 20rpx;
 					image{
 						width: 100%;
 						height: 100%;
@@ -98,6 +125,51 @@
 				height: 80rpx;
 				line-height: 80rpx;
 			}
+		}
+		
+		.select{
+			padding-top: 50rpx;
+			.content{
+				width: 720rpx;
+				margin-left: 30rpx;
+				margin-top: 30rpx;
+				scroll-view{
+					white-space: nowrap;
+					.box{
+						width: 200rpx;
+						height: 430rpx;
+						display: inline-block;
+						margin-right: 15rpx;
+						image{
+							width: 100%;
+							height: 100%;
+							
+						}
+					}
+					.box:last-child{
+						margin-right: 30rpx;
+					}
+				}
+				
+			}
+			.date{
+				// font-size: 28rpx;
+				color: #28b389;
+				display: flex;
+				align-items: center;
+				.text{
+					margin-left: 5rpx;
+				}
+			}
+		}
+		.theme{
+			margin-top: 30rpx;
+			font-size: 30rpx;
+			.more{
+				font-size: 27rpx;
+				color: #888;
+			}
+			
 		}
 	}
 	
