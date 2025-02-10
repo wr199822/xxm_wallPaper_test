@@ -1,0 +1,1 @@
+<view class="common-title"><view class="name"><slot name="name"></slot></view><view class="custom"><slot name="custom"></slot></view></view>

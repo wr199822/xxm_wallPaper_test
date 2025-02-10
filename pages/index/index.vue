@@ -1,8 +1,8 @@
 <template>
-	<view class="homeLayout">
+	<view class="homeLayout pageBg">
 		<view class="banner">
 			<swiper indicator-dots=true indicator-color="rgba(255, 255, 255, 0.7)" 
-			indicator-active-color=#ffffff circular=true autoplay=true interval="2000">
+			indicator-active-color=#fff circular=true autoplay=true interval="2000">
 				<swiper-item v-for="item in pics">
 					<image :src="item" mode="aspectFill"></image>
 				</swiper-item>
@@ -11,7 +11,7 @@
 		
 		<view class="notice">
 			<view class="left">
-				<uni-icons type="sound-filled" size="28" color="#2aa47f"></uni-icons>
+				<uni-icons type="sound-filled" size="28"></uni-icons>
 				<text>公告</text>
 			</view>
 			<view class="center">
@@ -28,7 +28,7 @@
 				<template  #name>今日推荐</template>
 				<template #custom>
 					<view class="date">
-						<uni-icons type="calendar-filled" size="24" color="#28b389"></uni-icons>
+						<uni-icons type="calendar-filled" size="25"></uni-icons>
 						<view class="text">
 							<uni-dateformat :date="Date.now()" format="dd日"></uni-dateformat>
 						</view>
@@ -52,6 +52,10 @@
 					</view>
 				</template>
 			</common-title>
+			<view class="content">
+				<common-theme v-for="item in 8" :isMore="false"></common-theme>
+				<common-theme  :isMore="true"></common-theme>
+			</view>
 		</view>
 
 	</view>
@@ -93,11 +97,16 @@
 			.left{
 				width: 140rpx;
 				font-size: 30rpx;
-				color: #2aa47f;
+				color: $brand-theme-color;
 				line-height: 80rpx;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				:deep(){
+					.uni-icons{
+						color: $brand-theme-color !important;
+					}
+				}
 				.text{
 					font-weight: 600;
 					font-size: 28rpx;
@@ -153,10 +162,15 @@
 				
 			}
 			.date{
-				// font-size: 28rpx;
-				color: #28b389;
+				font-size: 22rpx;
+				color: $brand-theme-color;
 				display: flex;
 				align-items: center;
+				:deep(){
+					.uni-icons{
+						color:$brand-theme-color !important;
+					}
+				}
 				.text{
 					margin-left: 5rpx;
 				}
@@ -165,9 +179,19 @@
 		.theme{
 			margin-top: 30rpx;
 			font-size: 30rpx;
+			padding-bottom:50rpx;
 			.more{
 				font-size: 27rpx;
 				color: #888;
+			}
+			.content{
+				margin-top: 30rpx;
+				padding: 0 30rpx ;
+				// padding-right: 30rpx;
+				// width: 720rpx;
+				display: grid;
+				grid-template-columns: repeat(3,1fr);
+				gap: 15rpx;
 			}
 			
 		}

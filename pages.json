@@ -3,7 +3,38 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true,
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/classify/classify",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"enablePullDownRefresh": true,
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path" : "pages/classiftList/classiftList",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/preview/preview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "预览",
+				"navigationStyle":"custom"
 			}
 		}
 	],
@@ -13,5 +44,27 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabBar/home.png",
+			"selectedIconPath": "static/tabBar/home-h.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/classify/classify",
+			"iconPath": "static/tabBar/classify.png",
+			"selectedIconPath": "static/tabBar/classify-h.png",
+			"text": "分类"
+		}, {
+			"pagePath": "pages/user/user",
+			"iconPath": "static/tabBar/user.png",
+			"selectedIconPath": "static/tabBar/user-h.png",
+			"text": "我的"
+		}]
+	}
 }

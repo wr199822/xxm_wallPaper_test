@@ -1,3 +1,11 @@
 view,swiper{
 	box-sizing: border-box;
 }
+
+.pageBg{
+	height: 80vh;
+	background: 
+	linear-gradient(to bottom,transparent,#fff 400rpx),
+	radial-gradient(90% 380rpx at left top,#aedadd,transparent),
+	radial-gradient(60% 380rpx at right top,#f5e3d9,transparent);
+}

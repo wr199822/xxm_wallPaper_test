@@ -1,0 +1,11 @@
+
+	/*每个页面公共css */
+view,swiper{
+	box-sizing: border-box;
+}
+.pageBg{
+	height: 80vh;
+	background: 
+	radial-gradient(100rpx 200rpx at left top,#aedadd,transparent)
+}
+page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分类",
+  "usingComponents": {
+    "common-theme": "../../components/common-theme/common-theme"
+  }
+}
